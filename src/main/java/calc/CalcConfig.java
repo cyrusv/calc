@@ -1,16 +1,18 @@
 package calc;
 
-import org.apache.kafka.common.config.ConfigDef;
 import io.confluent.rest.RestConfig;
+import org.apache.kafka.common.config.ConfigDef;
+
+import java.util.Map;
 
 public class CalcConfig extends RestConfig {
-  private static ConfigDef config;
+  private static final ConfigDef config;
 
   static {
     config = baseConfigDef();
   }
 
-  public CalcConfig() {
-    super(config);
+  public CalcConfig(Map<String, String> props) {
+    super(config, props);
   }
 }

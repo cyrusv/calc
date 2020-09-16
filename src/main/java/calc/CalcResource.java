@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
-Basic calc functions for integers
+ * Basic calc functions for integers
  */
 @Path("/calc")
 @Produces(MediaType.APPLICATION_JSON)
@@ -55,8 +55,8 @@ public class CalcResource {
   }
 
   @GET
-  @Path("history")
-  public List<MathProblem> history() {
+  @Path("audit")
+  public List<MathProblem> audit() {
     return history;
   }
 }
